@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lire une video automatiquement à son chargement  : attribut autoplay</h1>
+<h2>Avec attribut autoplay sur la balise HTML video</h2>
+<p>Chrome, Opéra par exemple, autorisent l'<strong>autoplay</strong> que si la video à l'attribut <strong>muted</strong></p>
+<figure><video controls autoplay preload="auto" id="idvideo" >
+  <source type="video/mp4" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.mp4"></source>
+  <source type="video/ogg" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.ogv"></source>
+<source type="video/webm" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.webm"></source>
+Votre navigateur ne supporte pas la balise HTML5 video.
+</video>
+<figcaption>Sans l'attribut <strong>muted</strong> et avec l'attribut <strong>autoplay</strong> sur la balise HTML video<br>Test avec action internaute :<br><button type="button" onclick="fctAutoplay('idvideo')">autoplay</button><br>l'action ne déclenche pas pour autant la lecture de la vidéo.<br>
+  <button type="button" onclick="fctPlay('idvideo')">play()</button>
+  doit jouer la vidéo
+</figcaption>
+</figure>
+<figure>
+  <video controls muted autoplay preload="auto" id="idvideo2" >
+    <source type="video/mp4" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.mp4"></source>
+  <source type="video/ogg" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.ogv"></source>
+<source type="video/webm" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.webm"></source>
+Votre navigateur ne supporte pas la balise HTML5 video.
+</video>
+<figcaption>Avec l'attribut <strong>autoplay</strong> et <strong>muted</strong> sur la balise HTML video</figcaption>
+</figure> 
+<h2>Sans attribut autoplay sur la balise HTML video</h2>
+<p>Dans ces tests nous essayons de passer par le javascript, pour voir si cela change quelque chose, malheureusement ...</p>
+<p>Dans ces tests l'attribut <strong>autoplay</strong> n'ai pas ajouté la balise HTML video, mais déclenché via le Javascript au chargement de la page.</p>
+<figure>
+  <video controls preload="auto" id="idvideoA" >
+    <source type="video/mp4" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.mp4"></source>
+  <source type="video/ogg" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.ogv"></source>
+<source type="video/webm" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.webm"></source>
+Votre navigateur ne supporte pas la balise HTML5 video.<span id="detectidvideoA"></span>
+</video>
+<figcaption>Sans l'attribut <strong>muted</strong> sur la balise HTML video<br>Test avec action internaute :<br><button type="button" onclick="fctAutoplay('idvideoA')">autoplay</button><br>l'action ne déclenche pas pour autant la lecture de la vidéo.<br>
+  <button type="button" onclick="fctPlay('idvideoA')">play()</button> doit jouer la vidéo</figcaption>
+</figure> 
+<figure>
+  <video controls muted preload="auto" id="idvideoA2" >
+    <source type="video/mp4" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.mp4"></source>
+  <source type="video/ogg" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.ogv"></source>
+<source type="video/webm" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.webm"></source>
+Votre navigateur ne supporte pas la balise HTML5 video.<span id="detectidvideoA2"></span>
+</video>
+<figcaption>Avec l'attribut <strong>muted</strong> sur la balise HTML video</figcaption>
+</figure> 
+<p>Dans ces tests, c'est la fonction javascript <strong>play()</strong> qui déclenchée via le Javascript au chargement de la page.</p>
+<figure>
+  <video controls preload="auto" id="idvideoB" >
+    <source type="video/mp4" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.mp4"></source>
+  <source type="video/ogg" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.ogv"></source>
+<source type="video/webm" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.webm"></source>
+Votre navigateur ne supporte pas la balise HTML5 video.
+</video>
+<figcaption>Sans l'attribut <strong>muted</strong> sur la balise HTML video <span id="detectidvideoB"></span><br>Test avec action internaute :<br>
+  <button type="button" onclick="fctAutoplay('idvideoB')">autoplay</button><br>l'action ne déclenche pas pour autant la lecture de la vidéo.<br>
+  <button type="button" onclick="fctPlay('idvideoB')">play()</button> doit jouer la vidéo
+</figcaption>
+</figure> 
+<figure>
+  <video controls muted preload="auto" id="idvideoB2" >
+    <source type="video/mp4" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.mp4"></source>
+  <source type="video/ogg" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.ogv"></source>
+<source type="video/webm" src="https://outils-javascript.aliasdmc.fr/img/videos/mov_bbb.webm"></source>
+Votre navigateur ne supporte pas la balise HTML5 video.
+</video>
+<figcaption>Avec l'attribut <strong>muted</strong> sur la balise HTML video</figcaption>
+</figure> 
+<hr>
+<div class="mise-en-page-lien">
+  <div class="bloc-mise-en-page bloc-lien">
+    <h2>Liens utiles</h2>
+    <ul> 
+      <li><a href="https://outils-javascript.aliasdmc.fr/proprietes-et-methodes-javascript-video.php#mKpVwE00000.codepen" target="_blank">Listes propriétés et méthodes javascript de la balise video</a></li> 
+      <li><a href="https://outils-javascript.aliasdmc.fr/evenements-video-html5-javascript.php#mKpVwE00000.codepen" target="_blank">Ecouter des événements javascript de la balise video HTML5.</a></li> 
+    </ul>
+  </div>
+  <div class="bloc-mise-en-page bloc-lien">
+    <h2>Liens Codepen</h2>
+    <ul> 
+      <li><a href="https://codepen.io/Zonecss/pen/abbVrqO" target="_blank">Jouer du son au survol de la souris en javascript</a></li>  
+      <li><a href="https://codepen.io/collection/DbWPxJ/" target="_blank">Audio / Vidéo Css/Javascript Exemple | ZoneCss.fr</a></li>  
+    </ul>
+  </div>
+  <div class="bloc-mise-en-page bloc-lien bloc-sites">
+    <h2>Sites</h2>
+    <ul>
+      <li><a href="https://www.zonecss.fr/#mKpVwE00000.codepen" target="_blank" title="Glossaire CSS">Zone CSS</a></li>
+      <li><a href="http://www.aliasdmc.fr/#mKpVwE00000.codepen" target="_blank" title="Glossaire HTML/JAVASCRIPT">Zone (X)HTML</a></li>
+      <li><a href="https://web-color.aliasdmc.fr/#mKpVwE00000.codepen" target="_blank" title="Couleurs pour le WEb (#,rgb,hsl)">Couleurs Web</a></li>
+      <li><a href="https://outils-css.aliasdmc.fr/#mKpVwE00000.codepen" target="_blank">Outils CSS</a></li>
+      <li><a href="https://outils-javascript.aliasdmc.fr/#mKpVwE00000.codepen" target="_blank">Outils Javascript</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+    function fctAutoplay(sIdVideo){
+  var oVideo = document.getElementById(sIdVideo);
+  oVideo.autoplay = true;
+}//fct 
+
+function fctPlay(sIdVideo){
+  var oVideo = document.getElementById(sIdVideo);
+  var playPromise = oVideo.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(function() {
+      //  
+    }).catch(function(error) {
+      var oDetect = document.getElementById("detect"+sIdVideo);
+      if(oDetect){
+        oDetect.innerHTML = "(on la détecté en javascript que la vidéo ne c'est pas lancée)";
+      }
+    });
+  }
+}//fct 
+
+document.addEventListener('DOMContentLoaded',function(){
+  //fctAutoplay('idvideo');
+  fctAutoplay('idvideoA');
+  fctAutoplay('idvideoA2'); 
+  fctPlay('idvideoB')
+  fctPlay('idvideoB2')
+});
+</script>
+</body>
+</html>
